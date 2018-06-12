@@ -51,6 +51,11 @@ Replace all. If you have modified the size of rsvmem, modify RSV_BUF_LEN in dma_
 \***Important** Modify the *AES_KEY_ADDR* and *DMA_BASE_ADDR* macros in dma_driver.c based on your IP address mapping.
 
 ---
+Add common files
+---
+Create a new directory `~/projects/common/`.  Copy *all* files under common/ to this directory.
+
+---
 Build
 ---
 ```
