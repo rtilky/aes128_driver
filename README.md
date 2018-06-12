@@ -44,7 +44,7 @@ Create a custom app by typing
 ```
 $ petalinux-create -t apps --name aes128 --enable
 ```
-Copy *all* files under aes128/ to <Your-Project-Root>/project-spec/meta-user/recipes-apps/aes128/files.
+Copy *all* files under aes128/ to <Your-Project-Root>/project-spec/meta-user/recipes-apps/aes128/files.  Make sure that the spacing is correct if pasting into a text editor.  The final line should be indented
 
 Replace all. If you have modified the size of rsvmem, modify RSV_BUF_LEN in dma_driver.h accordingly.
  

@@ -43,7 +43,6 @@ int rsvmem_major = 60;
 /* Buffer to store data */
 void *prsvmem;
 unsigned long phy_addr;
-unsigned long bus_addr;
 
 int memory_init(void)
 {
@@ -65,11 +64,9 @@ int memory_init(void)
         goto fail;
     }
     phy_addr = (unsigned long)virt_to_phys(prsvmem);
-    bus_addr = (unsigned long)virt_to_bus(prsvmem);
-    printk("rsvmem: Reserved %dKB at %08lx(bus=%08lx, va=%p)\n",
+    printk("rsvmem: Reserved %dKB at %08lx(va=%p)\n",
         RESERVED_SIZE / 1024,  
         phy_addr,
-        bus_addr,
         prsvmem);
     memset(prsvmem, (int)'G', RESERVED_SIZE);
     ((char *)prsvmem)[10] = 0;
